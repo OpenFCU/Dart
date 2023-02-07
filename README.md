@@ -1,6 +1,6 @@
 # Unofficial FCU Dart SDK
 
-Access to services by emulating HTTP requests and parsing responses.
+Access to FCU services by emulating HTTP requests and parsing responses.
 
 ## Features
 
@@ -33,7 +33,9 @@ FCU_PASS=password
 Run with:
 
 ```shell
-dart compile exe -o fcu ./cmd/main.dart
+dart pub get
+dart run build_runner build
+dart compile exe -o fcu bin/main.dart
 ./fcu class
 ```
 
