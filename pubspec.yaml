@@ -1,0 +1,19 @@
+name: fcu
+description: Unofficial FCU Dart SDK
+version: 0.1.0
+homepage: https://github.com/OpenFCU
+
+environment:
+  sdk: 2.19.1
+
+dev_dependencies:
+  lints: 2.0.1
+  test: 1.22.2
+  build_runner: 2.3.3
+  json_serializable: 6.6.1
+  json_annotation: 4.8.0
+dependencies:
+  http: 0.13.5
+  tuple: 2.0.1
+  dotenv: 4.1.0
+  args: 2.3.2
