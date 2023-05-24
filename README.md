@@ -5,10 +5,10 @@
 ### Partial Finish
 
 - Student clocking
+- Timetable
 
 ### Work In Progress
 
-- Timetable
 - Course Querying
 - Single Sign-On (SSO)
 
