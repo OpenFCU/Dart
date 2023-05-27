@@ -1,10 +1,11 @@
 import 'package:cookie_jar/cookie_jar.dart';
 import 'package:dio/dio.dart';
 import 'package:dio_cookie_manager/dio_cookie_manager.dart';
-import 'package:openfcu/src/timetable.dart';
 
 import 'asp_interceptor.dart';
 import 'clocking.dart';
+import 'timetable.dart';
+import 'course_search/course_search.dart';
 
 class OpenFcu {
   final Dio _client;
@@ -13,10 +14,12 @@ class OpenFcu {
 
   final ClockingManager clocking;
   final TimetableManager timetable;
+  final CourseSearchManager courseSearch;
 
   OpenFcu._(this._client, this._user, this._password)
       : clocking = ClockingManager(_client, _user, _password),
-        timetable = TimetableManager(_client, _user, _password) {
+        timetable = TimetableManager(_client, _user, _password),
+        courseSearch = CourseSearchManager(_client) {
     _client.options
       ..followRedirects = true
       ..validateStatus = ((code) => code! < 400)

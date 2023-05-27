@@ -5,52 +5,52 @@ abstract interface class ExtraFilter {
 }
 
 class CreditExtraFilter implements ExtraFilter {
-  final int value;
+  final int credit;
 
-  CreditExtraFilter(this.value);
+  CreditExtraFilter(this.credit);
 
   @override
   Iterable<Course> filter(Iterable<Course> courses) =>
-      courses.where((course) => course.credit == value);
+      courses.where((course) => course.credit == credit);
 }
 
-class OpenerExtraFilter implements ExtraFilter {
-  final String value;
+class OpenerNameExtraFilter implements ExtraFilter {
+  final String name;
 
-  OpenerExtraFilter(this.value);
+  OpenerNameExtraFilter(this.name);
 
   @override
   Iterable<Course> filter(Iterable<Course> courses) =>
-      courses.where((course) => course.opener.contains(value));
+      courses.where((course) => course.opener.name.contains(name));
 }
 
 class DayExtraFilter implements ExtraFilter {
-  final int value;
+  final int day;
 
-  DayExtraFilter(this.value);
+  DayExtraFilter(this.day);
 
   @override
   Iterable<Course> filter(Iterable<Course> courses) => courses
-      .where((course) => course.periods.any((period) => period.day == value));
+      .where((course) => course.periods.any((period) => period.day == day));
 }
 
 class SectionExtraFilter implements ExtraFilter {
-  final int value;
+  final int section;
 
-  SectionExtraFilter(this.value);
+  SectionExtraFilter(this.section);
 
   @override
   Iterable<Course> filter(Iterable<Course> courses) =>
       courses.where((course) => course.periods
-          .any((period) => period.start < value && period.end > value));
+          .any((period) => period.start < section && period.end > section));
 }
 
 class LocationExtraFilter implements ExtraFilter {
-  final String value;
+  final String location;
 
-  LocationExtraFilter(this.value);
+  LocationExtraFilter(this.location);
 
   @override
   Iterable<Course> filter(Iterable<Course> courses) => courses.where((course) =>
-      course.periods.any((period) => period.location.contains(value)));
+      course.periods.any((period) => period.location.contains(location)));
 }
