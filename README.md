@@ -2,14 +2,14 @@
 
 ## Feature
 
-### Partial Finish
+### Working
 
 - Student clocking
 - Timetable
+- Course Querying
 
 ### Work In Progress
 
-- Course Querying
 - Single Sign-On (SSO)
 
 ## License
