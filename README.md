@@ -1,17 +1,25 @@
 # Unofficial FCU Dart API
 
-## Feature
+**Work in Progress**
 
-### Working
+Feature proposal / PR welcome.
+
+## Features
 
 - Student clocking
 - Timetable
-- Course Querying
+- Course querying
 
-### Work In Progress
+## Todo
 
 - Single Sign-On (SSO)
+- Notifications
 
 ## License
 
 See [LICENSE](LICENSE)
+
+## Contacts
+
+- personal: admin@mikuc.at
+- school: d0888011@o365.fcu.edu.tw
