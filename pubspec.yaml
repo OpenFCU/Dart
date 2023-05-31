@@ -1,6 +1,6 @@
 name: openfcu
 description: Unofficial FCU Dart API
-version: 0.2.0
+version: 0.3.0
 repository: https://github.com/OpenFCU/Dart
 
 environment:
