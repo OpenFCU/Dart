@@ -9,10 +9,10 @@ Feature proposal / PR welcome.
 - Student clocking
 - Timetable
 - Course querying
+- Quick login web services
 
 ## Todo
 
-- Single Sign-On (SSO)
 - Notifications
 
 ## License

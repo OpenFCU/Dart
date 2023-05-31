@@ -1,3 +1,7 @@
+import 'dart:io';
+
+import 'package:dio/dio.dart';
+
 extension UrlOrigin on Uri {
   get page => origin + path;
 }
@@ -33,3 +37,6 @@ Map<String, int> str2day = {
   '六': 5,
   '日': 6,
 };
+
+final Options jsonOptions =
+    Options(headers: {HttpHeaders.contentTypeHeader: 'application/json'});

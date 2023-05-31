@@ -1,6 +1,7 @@
 import 'package:openfcu/openfcu.dart';
 import 'package:openfcu/src/course_search/basic_search_filter.dart';
 import 'package:openfcu/src/course_search/extra_search_filter.dart';
+import 'package:openfcu/src/quick_login.dart';
 
 Future<void> main(List<String> arguments) async {
   final api = OpenFcu('D1234567', 'password');
@@ -8,6 +9,7 @@ Future<void> main(List<String> arguments) async {
   await clocking(api);
   await timetable(api);
   await courseSearch(api);
+  await quickLogin(api);
 
   api.close();
 }
@@ -37,4 +39,9 @@ Future<void> courseSearch(OpenFcu api) async {
   for (final c in courses) {
     print("${c.code} ${c.name}");
   }
+}
+
+Future<void> quickLogin(OpenFcu api) async {
+  final uri = await api.quickLogin.login(MyFcuTarget.main);
+  print('Redirect URL: $uri');
 }
